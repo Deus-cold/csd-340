@@ -1,0 +1,23 @@
+#container {
+    margin: 50px 100px;
+}
+
+h1, h2, h3, h4 {
+    background-color: #2E8B57;  /* Example color */
+    color: white;
+    border: 1px solid #D6A800;
+    padding: 10px;
+}
+
+a {
+    color: #2E8B57;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #1E6930;  /* Hover effect color */
+}
+
+a:visited {
+    color: #2E8B57;
+}
