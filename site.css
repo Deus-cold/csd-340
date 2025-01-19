@@ -3,21 +3,21 @@
 }
 
 h1, h2, h3, h4 {
-    background-color: #2E8B57;  /* Example color */
+    background-color: #FF0000;  /* Red background color */
     color: white;
     border: 1px solid #D6A800;
     padding: 10px;
 }
 
 a {
-    color: #2E8B57;
+    color: #FF0000;  /* Matching link color */
     text-decoration: none;
 }
 
 a:hover {
-    color: #1E6930;  /* Hover effect color */
+    color: #B22222;  /* Hover color matching background */
 }
 
 a:visited {
-    color: #2E8B57;
+    color: #FF0000;  /* Visited link color */
 }
