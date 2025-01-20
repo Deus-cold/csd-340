@@ -1,0 +1,64 @@
+/* Main container */
+#container {
+    margin: 20px;
+    font-family: Arial, sans-serif;
+}
+
+/* Center the title */
+h1 {
+    text-align: center;
+}
+
+/* Style the left and right divs */
+#left-div, #right-div {
+    width: 45%;
+    display: inline-block;
+    vertical-align: top;
+    margin: 20px;
+}
+
+/* Left div ordered list styles */
+#left-div h3, #left-div ol {
+    border: 1px solid red;
+    border-radius: 15px;
+    padding: 10px;
+}
+
+#left-div ol {
+    list-style: inside decimal;
+}
+
+/* Right div unordered list styles */
+#right-div h3, #right-div ul {
+    border: 1px dashed red;
+    border-radius: 15px;
+    padding: 10px;
+}
+
+#right-div ul {
+    list-style: upper-roman inside;
+}
+
+/* Styling h3 and list items */
+h3 {
+    font-weight: 500;
+}
+
+ol li, ul li {
+    font-weight: 300;
+}
+
+/* Bottom div styling */
+#bottom-div {
+    width: 100%;
+    margin-top: 60%;
+}
+
+#bottom-div a {
+    float: right;
+    text-decoration: none;
+}
+
+#bottom-div a:hover {
+    text-decoration: underline;
+}
