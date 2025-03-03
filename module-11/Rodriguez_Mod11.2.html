@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSD 340 Web Development with HTML and CSS</title>
+    <script>
+        let items = [];
+        
+        function addItem() {
+            let input = document.getElementById("textBox").value;
+            if (input.trim() !== "") {
+                items.push(input);
+                alert(`Added: ${input} at position ${items.length}`);
+                document.getElementById("textBox").value = "";
+            } else {
+                alert("Please enter a valid item.");
+            }
+        }
+
+        function deleteLastItem() {
+            if (items.length > 0) {
+                let removedItem = items.pop();
+                alert(`Deleted: ${removedItem}`);
+            } else {
+                alert("No items to delete.");
+            }
+        }
+
+        function displayItems() {
+            let output = "";
+            if (items.length > 0) {
+                items.forEach((item, index) => {
+                    output += `${index + 1}. ${item}\n`;
+                });
+            } else {
+                output = "No items in the list.";
+            }
+            alert(output);
+        }
+    </script>
+</head>
+<body>
+    <h1>Assignment 11.2: JavaScript - Part 3</h1>
+    <input type="text" id="textBox" placeholder="Enter item">
+    <button onclick="addItem()">Add</button>
+    <button onclick="deleteLastItem()">Delete Last Entry</button>
+    <button onclick="displayItems()">Display</button>
+</body>
+</html>
