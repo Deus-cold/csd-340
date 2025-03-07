@@ -1,34 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CSD 340 Web Development with HTML and CSS</title>
-  <script>
-    let books = [
-      "Shoe Dog"
-      "The Hard Thing about the Hard Things"
-      "The Secret"
-      "Quiet"
-      "The Founders"
-      "The Psychology of Money"
-      "48 Laws of Power"
-      "How to Turn Down a Billion Dollars"
-      "Elon Musk"
-      "The Alchemist"
-    ];
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSD 340 Web Development with HTML and CSS</title>
+    <link rel="stylesheet" href="Rodriguez_Mod12_2.css">
+    <script>
+        // Array of top 10 favorite books
+        let books = [
+            "Shoe Dog",
+            "Quiet",
+            "The Psychology of Money",
+            "The Four Agreements",
+            "Elon Musk",
+            "48 Laws of Power",
+            "The Alchemist",
+            "How to Turn Down a Billion Dollars",
+            "The Hard Thing About Hard Things",
+            "The Founders"
+        ];
 
-    function displayTopToBottom() {
-      alert("Top to Bottom:\n" + books.join("\n"));
+        // Function to display books in ascending order
+        function displayAscending() {
+            let sortedBooks = books.slice().sort();
+            document.getElementById("book-list").innerHTML = formatList(sortedBooks);
+        }
 
-     function displayBottomToTop() {
-       alert(Bottom to Top:\n" + books.slice().reverse().join("\n"));
-     }
-  </script>
+        // Function to display books in descending order
+        function displayDescending() {
+            let sortedBooks = books.slice().sort().reverse();
+            document.getElementById("book-list").innerHTML = formatList(sortedBooks);
+        }
+
+        // Helper function to format the book list as an HTML ordered list
+        function formatList(arr) {
+            return "<ol>" + arr.map(book => `<li>${book}</li>`).join('') + "</ol>";
+        }
+
+    </script>
 </head>
 <body>
-   <h1>Assignment 12.2: JavaScript - Part 4</h1>
-    <button onclick="displayTopToBottom()">Top to Bottom</button>
-    <button onclick="displayBottomToTop()">Bottom to Top</button> 
+    <div id="container">
+        <h1>Assignment 12.2: JavaScript - Part 4</h1>
+
+        <h3>My Top 10 Favorite Books</h3>
+        <div id="book-list">
+            <ol>
+                <li>Shoe Dog</li>
+                <li>Quiet</li>
+                <li>The Psychology of Money</li>
+                <li>The Four Agreements</li>
+                <li>Elon Musk</li>
+                <li>48 Laws of Power</li>
+                <li>The Alchemist</li>
+                <li>How to Turn Down a Billion Dollars</li>
+                <li>The Hard Thing About Hard Things</li>
+                <li>The Founders</li>
+            </ol>
+        </div>
+
+        <button onclick="displayAscending()">Top to Bottom</button>
+        <button onclick="displayDescending()">Bottom to Top</button>
+
+        <div id="bottom-div">
+            <a href="../index.html">Back to Portal Page</a>
+        </div>
+    </div>
 </body>
 </html>
